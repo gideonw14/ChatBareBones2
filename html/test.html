@@ -29,7 +29,12 @@
 	<button onclick="displayTime()">What time is it?</button>
 	<p id="time"></p>
 
-	<!-- Trying to create an account -->
+	<form name="myForm" onsubmit="return validateForm()">
+	Name: <input type="text" name="fname">
+	<input type="submit" value="Submit">
+	</form>
+
+	<!-- Trying to create an account 
 	<h1>Create Account!</h1>
 	<form name="createAccount" onsubmit="return validateForm()">
 		<div class="form-group">
@@ -44,7 +49,8 @@
 			<label for="email">Email</label>
 			<input type="email" class="form-control" name="email" placeholder="use@this.format">
 		</div>
-		<input type="submit" name="create" class="btn btn-danger" value="Submit">Submit</input>
+		<input type="submit" name="create" class="btn btn-danger">Submit</input>
 	</form>
+	-->
 </body>
 </html>

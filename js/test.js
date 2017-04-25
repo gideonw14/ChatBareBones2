@@ -19,6 +19,7 @@ $('form').submit(function() {
 
 function validateForm() {
 	console.log("Running validateForm");
+	return true;
 }
 
 function pageLoad() {
@@ -30,10 +31,9 @@ function displayTime() {
 		displayTime.showHide = false;
 	}
 	displayTime.showHide = !displayTime.showHide;
-	if(displayTime.showHide){
-		document.getElementById("time").innerHTML = Date();
-	}
-	else{
-		document.getElementById("time").innerHTML = "";
-	}
+	var time = document.getElementById("time").innerHTML
+	if(displayTime.showHide)
+		time = Date();
+	else
+		time = "";
 }
