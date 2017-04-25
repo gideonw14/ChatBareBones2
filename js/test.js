@@ -1,15 +1,15 @@
 $(document).ready(function(){
-	alert("Creating Donald Duck");
-    $("#donald").click(function(){
-        $.post("/users",			//URL
-        {							//Data
-          name: "Donald Duck",
-          password: "Password123",
-          email: "donald@duck.org"
-        },
-        function(data,status){ 		//Callback
-            alert("Data: " + data + "\nStatus: " + status);
-        });
+     $("#donald").click(function(){
+     	alert("button clicked");
+    //     $.post("/users",			//URL
+    //     {							//Data
+    //       name: "Donald Duck",
+    //       password: "Password123",
+    //       email: "donald@duck.org"
+    //     },
+    //     function(data,status){ 		//Callback
+    //         alert("Data: " + data + "\nStatus: " + status);
+    //     });
     });
 });
 
