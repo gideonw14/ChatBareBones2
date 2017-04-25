@@ -18,7 +18,7 @@ $('form').submit(function() {
 });
 
 function validateForm() {
-	console.log("IM GOING CRAZY");
+	alert("Form submit");
     var x = document.forms["myForm"]["fname"].value;
     if (x == "") {
         alert("Name must be filled out");
