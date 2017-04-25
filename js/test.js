@@ -18,8 +18,11 @@ $('form').submit(function() {
 });
 
 function validateForm() {
-	console.log("Running validateForm");
-	return true;
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
 }
 
 function pageLoad() {
@@ -31,9 +34,10 @@ function displayTime() {
 		displayTime.showHide = false;
 	}
 	displayTime.showHide = !displayTime.showHide;
-	var time = document.getElementById("time").innerHTML
-	if(displayTime.showHide)
-		time = Date();
-	else
-		time = "";
+	if(displayTime.showHide){
+		document.getElementById("time").innerHTML = Date();
+	}
+	else{
+		document.getElementById("time").innerHTML = "";
+	}
 }
