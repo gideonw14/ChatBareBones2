@@ -1,30 +1,17 @@
-$('form').submit(function() {
-    var form = $(this);
-    var data = form.serialize();
-    console.log("form submit works");
-
-    $.ajax({
-        url: '/users',
-        method: 'POST',
-        data: data,
-        success: function(resp){
-             console.log("server replied ", resp);
+$(document).ready(function(){
+	alert("Creating Donald Duck");
+    $("#donald").click(function(){
+        $.post("/users",			//URL
+        {							//Data
+          name: "Donald Duck",
+          password: "Password123",
+          email: "donald@duck.org"
         },
-        error: function() {
-            //handle error
-        }
+        function(data,status){ 		//Callback
+            alert("Data: " + data + "\nStatus: " + status);
+        });
     });
-    return false;
 });
-
-function validateForm() {
-	alert("Form submit");
-    var x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-        alert("Name must be filled out");
-        return false;
-    }
-}
 
 function pageLoad() {
 	console.log("Javascript is working.")
