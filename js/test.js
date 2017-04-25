@@ -1,5 +1,3 @@
-console.log("test.js is working");
-
 $('form').submit(function() {
     var form = $(this);
     var data = form.serialize();
@@ -21,4 +19,21 @@ $('form').submit(function() {
 
 function myFunc() {
 	console.log("you aren't crazy");
+}
+
+function pageLoad() {
+	console.log("Javascript is working.")
+}
+
+function displayTime() {
+	if(typeof displayTime.showHide == 'undefined'){
+		displayTime.showHide = false;
+	}
+	displayTime.showHide = !displayTime.showHide;
+	if(displayTime.showHide){
+		document.getElementById("time").innerHTML = Date();
+	}
+	else{
+		document.getElementById("time").innerHTML = "";
+	}
 }

@@ -12,7 +12,9 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>'
 	<script type="text/javascript" src="/client/js/test.js"></script>
 </head>
-<body>
+<body onload="pageLoad()">
+
+	<!--JUMBOTRON -->
 	<div class="jumbotron">
 	  <h1 class="display-3">Hello, world!</h1>
 	  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -22,6 +24,12 @@
 	    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 	  </p>
 	</div>
+
+	<!-- Messing around with buttons -->
+	<button onclick="displayTime()">What time is it?</button>
+	<p id="time"></p>
+
+	<!-- Trying to create an account -->
 	<h1>Create Account!</h1>
 	<form id="createAccount" onsubmit="myFunc()">
 		<div class="form-group">
