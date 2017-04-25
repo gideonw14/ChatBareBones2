@@ -1,9 +1,20 @@
-alert("Hey i work - test.js");
+console.log("test.js is working");
 
-function ajax() {
-  $('form').submit(function() {
-    console.log($(this).serializeArray());
-    $('#result').text(JSON.stringify($(this).serializeArray()));
+$('form').submit(function() {
+    var form = $(this);
+    var data = form.serialize();
+    console.log("form submit works");
+
+    $.ajax({
+        url: '/users'
+        method: 'POST',
+        data: data,
+        success: function(resp){
+             
+        },
+        error: function() {
+            //handle error
+        }
+    });
     return false;
-  });
-}
+});
