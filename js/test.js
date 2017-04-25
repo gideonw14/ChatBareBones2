@@ -6,11 +6,11 @@ $('form').submit(function() {
     console.log("form submit works");
 
     $.ajax({
-        url: '/users'
+        url: '/users',
         method: 'POST',
         data: data,
         success: function(resp){
-             
+             console.log("server replied ", resp);
         },
         error: function() {
             //handle error
