@@ -17,8 +17,8 @@ $('form').submit(function() {
     return false;
 });
 
-function myFunc() {
-	console.log("you aren't crazy");
+function validateForm() {
+	console.log("Running validateForm");
 }
 
 function pageLoad() {

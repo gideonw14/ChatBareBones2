@@ -31,20 +31,20 @@
 
 	<!-- Trying to create an account -->
 	<h1>Create Account!</h1>
-	<form id="createAccount" onsubmit="myFunc()">
+	<form name="createAccount" onsubmit="return validateForm()">
 		<div class="form-group">
 			<label for="username">Username</label>
-			<input type="text" class="form-control" id="username" placeholder="SomeDude">
+			<input type="text" class="form-control" name="username" placeholder="SomeDude">
 		</div>
 		<div class="form-group">
 			<label for="password">Password</label>
-			<input type="password" class="form-control" id="password" placeholder="*****">
+			<input type="password" class="form-control" name="password" placeholder="*****">
 		</div>
 		<div class="form-group">
 			<label for="email">Email</label>
-			<input type="email" class="form-control" id="email" placeholder="use@this.format">
+			<input type="email" class="form-control" name="email" placeholder="use@this.format">
 		</div>
-		<button id="create" type="submit" class="btn btn-primary">Submit</button>
+		<input type="submit" name="create" class="btn btn-danger" value="Submit">Submit</input>
 	</form>
 </body>
 </html>
