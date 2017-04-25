@@ -13,6 +13,14 @@ $(document).ready(function(){
     });
 });
 
+function validateForm() {
+    var username = document.forms["createAccount"]["username"].value;
+    if (username == "") {
+        alert("Username must be filled out");
+        return false;
+    }
+}
+
 function pageLoad() {
 	console.log("Javascript is working.")
 }
