@@ -1,6 +1,9 @@
 alert("Hey i work - test.js");
-$(document).ready(function(){
-	$("#createAccount").submit(function(){
-		console.log($(this).serializeArray());
-	});
-});
+
+function ajax() {
+  $('form').submit(function() {
+    console.log($(this).serializeArray());
+    $('#result').text(JSON.stringify($(this).serializeArray()));
+    return false;
+  });
+}
