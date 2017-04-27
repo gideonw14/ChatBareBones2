@@ -2,55 +2,43 @@
 <html>
 <head>
 	<title>BareBones Chat</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="/client/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/client/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="/client/css/bootstrap-reboot.min.css">
+	<script type="text/javascript" src="/client/js/bootstrap.min.js"></script>
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>'
-	<script type="text/javascript" src="/client/js/test.js"></script>
+	<!-- Our Javascript -->
+	<script type="text/javascript" src="/client/js/main.js"></script>
 </head>
 <body onload="pageLoad()">
-	<div class="container">
-  <div class="row">
-    <div class="col">
-      1 of 3
-    </div>
-    <div class="col-6">
-      2 of 3 (wider)
-    </div>
-    <div class="col">
-      3 of 3
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      1 of 3
-    </div>
-    <div class="col-5">
-      2 of 3 (wider)
-    </div>
-    <div class="col">
-      3 of 3
-    </div>
-  </div>
-</div>
-	<div class="container"> <!-- Main Wrapper -->
-		<div class="row">
-			<!--JUMBOTRON -->
-			<div class="jumbotron">
-			  <h1 class="display-3">Hello, world!</h1>
-			  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-			  <hr class="my-4">
-			  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-			  <p class="lead">
-			    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-			  </p>
-			</div>
-		</div><!-- end row div -->
+	<div id="menu"></div>
+	<!-- Navbar -->
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <a class="navbar-brand">BareBones</a>
 
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/index">Home<span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/login">Login</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/register">Register</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<!-- Main Wrapper -->
+	<div class="container"> 
 		<div class="row">
 			<div class="col">col 1</div>
 			<div class="col">
@@ -60,44 +48,19 @@
 			</div>
 			<div class="col">col 3</div>
 		</div>
-
-		<!-- Test Form 
-		<form name="myForm" onsubmit="return validateForm()">
-		Name: <input type="text" name="fname">
-		<input type="submit" value="Submit">
-		</form>
-		-->
 		
 		<div class="row">
-			<!-- Trying to create an account -->
-			<h1>Create Account!</h1>
-			<form name="createAccount" onsubmit="return validateForm()">
-				<div class="form-group">
-					<label for="username">Username</label>
-					<input type="text" class="form-control" name="username" placeholder="SomeDude">
-				</div>
-				<div class="form-group">
-					<label for="password">Password</label>
-					<input type="password" class="form-control" name="password" placeholder="*****">
-				</div>
-				<div class="form-group">
-					<label for="email">Email</label>
-					<input type="email" class="form-control" name="email" placeholder="use@this.format">
-				</div>
-				<input type="submit" name="create" class="btn btn-danger" value="Create Account"></input>
-			</form>
+			
 		</div>
 
+		<!-- Trying to create Donald Duck account -->
 		<div class="row">
 			<div class="col"></div>
 			<div class="col">
-				<!-- Trying to create Donald Duck account -->
 				<button id="donald" class="btn btn-info">Create Donald's Account</button>
 			</div>
 			<div class="col"></div>
 		</div>
-		<a class="btn btn-default" href="/login">Login</a>
 	</div><!-- end wrapper -->
-
 </body>
 </html>

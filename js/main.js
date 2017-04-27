@@ -5,9 +5,15 @@
 //   });
 // });
 
+//wait until the dom is loaded
+$(document).ready(function () {
+    //adds menu.html content into any "#menu" element
+    $('#menu').load('menu.html');
+});
+
+//Donald Duck Feature
 $(document).ready(function(){
      $("#donald").click(function(){
-     	alert("donald button clicked");
         $.ajax({
           type: "POST",
           url: "/api/users",
@@ -16,7 +22,9 @@ $(document).ready(function(){
             password:"password123",
             email:   "donald@duck.com"
           }),
-          success: function(data, status){alert(status);},
+          success: function(data, status){
+            alert("Donald has been registered.");
+          },
           statusCode:{
             409: function(){
               alert("Username already taken");
@@ -27,6 +35,7 @@ $(document).ready(function(){
     });
 });
 
+//Derpy functions I stole from W3 schools
 function validateForm() {
     var username = document.forms["createAccount"]["username"].value;
     if (username == "") {
