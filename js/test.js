@@ -1,14 +1,28 @@
+// $document.ready(function(){
+//   $('#login').submit(function(){
+//     alert("Login form submit");
+//     $.get()
+//   });
+// });
+
 $(document).ready(function(){
      $("#donald").click(function(){
      	alert("donald button clicked");
-        $.post("/users",			//URL
-        {							//Data
-          name: "Donald Duck",
-          password: "Password123",
-          email: "donald@duck.org"
-        },
-        function(data,status){ 		//Callback
-            alert("Data: " + data + "\nStatus: " + status);
+        $.ajax({
+          type: "POST",
+          url: "/api/users",
+          data: JSON.stringify({
+            username:"Donald Duck",
+            password:"password123",
+            email:   "donald@duck.com"
+          }),
+          success: function(data, status){alert(status);},
+          statusCode:{
+            409: function(){
+              alert("Username already taken");
+            }
+          },
+          contentType: "application/json"
         });
     });
 });

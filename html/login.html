@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BareBones Chat</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>'
+	<script type="text/javascript" src="/client/js/test.js"></script>
+</head>
+<body onload="pageLoad()">
+	<h1>Login</h1>
+	<form name="login" onsubmit="return validateForm()">
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" class="form-control" name="username" placeholder="SomeDude">
+		</div>
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" name="password" placeholder="*****">
+		</div>
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" class="form-control" name="email" placeholder="use@this.format">
+		</div>
+		<input type="submit" name="create" class="btn btn-danger" value="Login"></input>
+	</form>
+	<a class="btn" href="/index">Go Home</a>
+</body>
+</html>
