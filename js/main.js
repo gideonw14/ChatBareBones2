@@ -1,17 +1,10 @@
-// $document.ready(function(){
-//   $('#login').submit(function(){
-//     alert("Login form submit");
-//     $.get()
-//   });
+//wait until the dom is loaded
+// $(document).ready(function () {
+//     //adds menu.html content into any "#menu" element
+//     $('#menu').load('menu.html');
 // });
 
-//wait until the dom is loaded
-$(document).ready(function () {
-    //adds menu.html content into any "#menu" element
-    $('#menu').load('menu.html');
-});
-
-//Donald Duck Feature
+// Donald Duck Feature
 $(document).ready(function(){
      $("#donald").click(function(){
         $.ajax({
@@ -35,7 +28,43 @@ $(document).ready(function(){
     });
 });
 
-//Derpy functions I stole from W3 schools
+// User Registration
+$(document).ready(function(){
+  $("#register").on("submit", function(){
+    // This will get all the input from the form into an array
+    var data = JSON.stringify($(this).serializeArray());
+    data = JSON.parse(data);
+    var user = {
+      username: data[0].value,
+      password: data[1].value,
+      email: data[2].value
+    }
+    data = JSON.stringify(user);
+    console.log(data);
+    $.ajax({
+      type: "POST",
+      url: "/api/users",
+      data: data,
+      success: function(){
+        alert(user.username + " successfully registered.");
+      },
+      statusCode:{ 
+        409: function(){
+          alert("Username already taken");
+        }
+      },
+      contentType: "application/json"
+    });
+  });
+});
+
+function hello() {
+  alert("Hello! You submit the form");
+}
+
+//=======================================
+// Derpy functions I stole from W3 schools
+//=======================================
 function validateForm() {
     var username = document.forms["createAccount"]["username"].value;
     if (username == "") {
