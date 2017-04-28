@@ -14,26 +14,25 @@
 	<link rel="stylesheet" type="text/css" href="/client/css/bootstrap-reboot.min.css">
 	<script type="text/javascript" src="/client/js/bootstrap.min.js"></script>
 
+	<!-- JQuery Session -->
+	<script type="text/javascript" src="/client/js/jquery.session.js"></script>
+
 	<!-- Our Javascript -->
 	<script type="text/javascript" src="/client/js/main.js"></script>
 </head>
 <body onload="pageLoad()">
 	<h1>Login</h1>
-	<form name="login" onsubmit="return validateForm()">
+	<form id="login" onsubmit="return false;">
 		<div class="form-group">
 			<label for="username">Username</label>
-			<input type="text" class="form-control" name="username" placeholder="SomeDude">
+			<input type="text" class="form-control" name="username" value="SomeDude">
 		</div>
 		<div class="form-group">
 			<label for="password">Password</label>
-			<input type="password" class="form-control" name="password" placeholder="*****">
+			<input type="password" class="form-control" name="password" value="password123">
 		</div>
-		<div class="form-group">
-			<label for="email">Email</label>
-			<input type="email" class="form-control" name="email" placeholder="use@this.format">
-		</div>
-		<input type="submit" name="create" class="btn btn-danger" value="Login"></input>
+		<input type="submit" class="btn btn-danger" value="Login"></input>
 	</form>
-	<a class="btn" href="/index">Go Home</a>
+	<a class="btn btn-primary" href="/index">Go Home</a>
 </body>
 </html>

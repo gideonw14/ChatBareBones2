@@ -40,7 +40,6 @@ $(document).ready(function(){
       email: data[2].value
     }
     data = JSON.stringify(user);
-    console.log(data);
     $.ajax({
       type: "POST",
       url: "/api/users",
@@ -58,8 +57,36 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $("#login").submit(function(){
+    var data = JSON.stringify($(this).serializeArray());
+    data = JSON.parse(data);
+    var user = {
+      username: data[0].value,
+      password: data[1].value
+    }
+    data = JSON.stringify(user);
+    console.log(data);
+    $.ajax({
+      type: "POST",
+      url: "/api/session",
+      data: data,
+      success: function(data, status){
+        alert(user.username + " successfully logged in");
+        $.session.set("key", data);
+        window.location.replace("http://localhost:8000/index");
+      },
+      // statusCode:{
+
+      // },
+      contentType: "application/json"
+    });
+  });
+});
+
 function hello() {
   alert("Hello! You submit the form");
+  return false;
 }
 
 //=======================================
