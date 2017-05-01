@@ -46,6 +46,7 @@ $(document).ready(function(){
       data: data,
       success: function(){
         alert(user.username + " successfully registered.");
+        window.location.replace("/login")
       },
       statusCode:{ 
         409: function(){
@@ -57,24 +58,52 @@ $(document).ready(function(){
   });
 });
 
+//User Login
 $(document).ready(function(){
   $("#login").submit(function(){
-    var data = JSON.stringify($(this).serializeArray());
-    data = JSON.parse(data);
-    var user = {
-      username: data[0].value,
-      password: data[1].value
+    if(!($.session.get("key") == "")){
+      var data = JSON.stringify($(this).serializeArray());
+      data = JSON.parse(data);
+      var user = {
+        username: data[0].value,
+        password: data[1].value
+      }
+      data = JSON.stringify(user);
+      console.log(data);
+      $.ajax({
+        type: "POST",
+        url: "/api/session",
+        data: data,
+        success: function(data, status){
+          alert(user.username + " successfully logged in");
+          $.session.set("key", data);
+          $.session.set("name", user.username);
+          window.location.replace("/index");
+        },
+        statusCode:{
+          422: function(){
+            alert("Incorrect username or password");
+          }
+        },
+        contentType: "application/json"
+      });
     }
-    data = JSON.stringify(user);
-    console.log(data);
+    else{
+      alert("Already logged in!");
+    }
+  });
+});
+
+// User Logout
+$(document).ready(function(){
+  $("#logout").click(function(){
     $.ajax({
-      type: "POST",
+      type: "DELETE",
       url: "/api/session",
-      data: data,
+      data: $.session.get("key"),
       success: function(data, status){
-        alert(user.username + " successfully logged in");
-        $.session.set("key", data);
-        window.location.replace("http://localhost:8000/index");
+        alert("User logged out");
+        $.session.remove("key");
       },
       // statusCode:{
 
