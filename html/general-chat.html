@@ -1,0 +1,36 @@
+<!-- General Chat -->
+<html>
+<head>
+	<title>BareBones General Chat</title>
+	<!-- jQuery library - required for Bootstrap to work -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- Tether Library - required for Bootstrap to work -->
+	<script type="text/javascript" src="/client/js/tether.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="/client/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/client/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="/client/css/bootstrap-reboot.min.css">
+	<script type="text/javascript" src="/client/js/bootstrap.min.js"></script>
+
+	<!-- JQuery Session -->
+	<script type="text/javascript" src="/client/js/jquery.session.js"></script>
+
+	<!-- Our Javascript -->
+	<script type="text/javascript" src="/client/js/main.js"></script>
+	
+	<!-- Link CSS -->
+	<link rel="stylesheet" type="text/css" href="/client/css/style.css">
+</head>
+
+<body onload="pageLoad()">
+	<textarea  id="general-chat" rows="20" cols="80" style="margin: 10px" disabled>
+	</textarea>
+	<form id="submit-input">
+		<input type="text" class="form-control" name="chat">
+		<input type="submit" class="btn btn-primary" value="Send"></input>
+	</form>
+	<a class="btn btn-primary" href="/index">Go Home</a>
+</body>
+</html>
