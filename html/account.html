@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!-- User account -->
 <html>
 <head>
-	<title>BareBones Chat</title>
+<title>BareBones User Account</title>
 	<!-- jQuery library - required for Bootstrap to work -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
@@ -23,19 +23,14 @@
 	<!-- Link CSS -->
 	<link rel="stylesheet" type="text/css" href="/client/css/style.css">
 </head>
+
 <body onload="pageLoad()">
-	<h1>Login</h1>
-	<form id="login" onsubmit="return false;">
-		<div class="form-group">
-			<label for="username">Username</label>
-			<input type="text" class="form-control" name="username" value="SomeDude">
-		</div>
-		<div class="form-group">
-			<label for="password">Password</label>
-			<input type="password" class="form-control" name="password" value="password123">
-		</div>
-		<input type="submit" class="btn btn-danger" value="Login"></input>
-	</form>
+	<h1>Account</h1>
+	<!-- Account information -->
+	<h2>Username</h2>
+	<p id="username"></p>
+	<a id="change_password" class="btn btn-danger" href="/password">Change Password</a>
+	<a id="logout" class="btn btn-danger" href="">Logout</a>
 	<a class="btn btn-primary" href="/index">Go Home</a>
 </body>
 </html>
