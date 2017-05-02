@@ -25,10 +25,11 @@
 </head>
 
 <body onload="pageLoad()">
-	<textarea  id="general-chat" rows="20" cols="80" style="margin: 10px" disabled>
+	<textarea  id="general-chat" class="form-control custom-control" rows="20" cols="80" 
+	 style="background-color: white" disabled>
 	</textarea>
 	<form id="submit-input">
-		<input type="text" class="form-control" name="chat">
+		<input type="text" class="form-control" name="chat" style="max-width: 65%">
 		<input type="submit" class="btn btn-primary" value="Send"></input>
 	</form>
 	<a class="btn btn-primary" href="/index">Go Home</a>

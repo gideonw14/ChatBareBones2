@@ -16,3 +16,11 @@ a       {
 body    {
 	background-color: rgb(100,100,100);
 }
+textarea{
+	margin: 10px;
+	background-color: white;
+	max-width: 65%;
+}
+input	{
+	max-width: 15%;
+}
