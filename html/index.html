@@ -20,13 +20,14 @@
 	<!-- Our Javascript -->
 	<script type="text/javascript" src="/client/js/main.js"></script>
 	
-	<!-- Link CSS -->
-	<link rel="stylesheet" type="text/css" href="/client/css/style">
+	<!-- Don't link CSS, it messes with the navbar -->
+
 </head>
-<body onload="pageLoad()">
+<body onload="pageLoad()" style="background-color: rgb(100,100,100)">
+	<link rel="import" href="/menu.html">
 	<!-- <div id="menu"></div> -->
 	<!-- Navbar -->
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: rgb(70,70,70); color: white">
 	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -58,13 +59,13 @@
 	<!-- Main Wrapper -->
 	<div class="container"> 
 		<div class="row">
-			<div class="col">col 1</div>
+			<div class="col"></div>
 			<div class="col">
 				<!-- Messing around with buttons -->
 				<button class="btn btn-warning" onclick="displayTime()">What time is it?</button>
 				<p id="time"></p>
 			</div>
-			<div class="col">col 3</div>
+			<div class="col"></div>
 		</div>
 		
 		<div class="row">
