@@ -145,3 +145,26 @@ function displayTime() {
 		document.getElementById("time").innerHTML = "";
 	}
 }
+
+//=======================================
+// Chat functionality
+//=======================================
+
+//send message
+$(document).ready(function(){
+  $("#register").on("submit", function(){
+    // This will get all the input from the form into an array
+    var data = JSON.stringify($(this).serializeArray());
+    data = JSON.parse(data);
+    var message = data[0].value;
+
+    data = JSON.stringify(message);
+    alert(message);
+    $.ajax({
+      type: "POST",
+      url: "/api/message",
+      data: data,
+      },
+      contentType: "application/json"
+    });
+  });
