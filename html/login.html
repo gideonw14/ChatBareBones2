@@ -24,6 +24,38 @@
 	<link rel="stylesheet" type="text/css" href="/client/css/style.css">
 </head>
 <body onload="pageLoad()">
+
+		<!-- Navbar -->
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: #1E90FF; color: white">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <a class="navbar-brand">BareBones</a>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item">
+	        <a class="nav-link" href="/index">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/register">Register</a>
+	      </li>
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+	      </li>
+		  <li class="nav-item">
+			<a class="nav-link" id="account" href="/account">Account</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" id="general-chat" href="/general-chat">General Chat</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" id="general-chat" href="/private-chat">Private Chat</a>
+		  </li>
+	    </ul>
+	  </div>
+	</nav>
+
 	<h1>Login</h1>
 	<form id="login" onsubmit="return false;">
 		<div class="form-group">
@@ -34,8 +66,8 @@
 			<label for="password">Password</label>
 			<input type="password" class="form-control" name="password" value="password123">
 		</div>
-		<input type="submit" class="btn btn-danger" value="Login"></input>
+		<input type="submit" class="btn btn-primary" value="Login"></input>
 	</form>
-	<a class="btn btn-primary" href="/index">Go Home</a>
+	<a class="btn btn-primary tabbed" href="/index">Go Home</a>
 </body>
 </html>

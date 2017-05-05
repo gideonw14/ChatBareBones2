@@ -10,16 +10,34 @@ h2	{
 input   {
 	margin: 10px;
 }
-a       {
+a.tabbed {
 	margin: 10px;
 }
 body    {
 	background-color: rgb(195,195,195);
 }
+
 .row {
 	padding: 20px;
 }
 
 input[type="text"], input[type="password"], input[type="email"]{
 	width: 25%;
+}
+
+textarea{
+	margin: 10px;
+	background-color: white;
+}
+
+div.chatbox {
+	text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:270px;
+    width:430px;
+    border:1px solid #ACD8F0;
+    overflow:auto;
 }
