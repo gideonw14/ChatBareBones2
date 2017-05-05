@@ -192,7 +192,7 @@ $(document).ready(function(){
           data.messages[i].msg + "\n";
         }
         console.log(messageString);
-        document.getElementById("general-chat").innerHTML = messageString;
+        document.getElementById("chatRoom").innerHTML = messageString;
       },
       statusCode:{
         404: function(){
