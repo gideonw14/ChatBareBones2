@@ -24,13 +24,37 @@
 	<link rel="stylesheet" type="text/css" href="/client/css/style.css">
 </head>
 
-<body onload="pageLoad()">
-	<textarea  id="general-chat" rows="20" cols="80" style="margin: 10px" disabled>
-	</textarea>
-	<form id="submit-input">
-		<input type="text" class="form-control" name="chat">
-		<input type="submit" class="btn btn-primary" value="Send"></input>
-	</form>
-	<a class="btn btn-primary" href="/index">Go Home</a>
+<body onload="loadUserInfo()">
+	<div class="container">
+		<div class="row">
+			<h4 id="username">Username</h4>
+		</div>
+		<div class="row">
+			<div class="col">
+				<textarea  id="general-chat" rows="20" cols="60" style="margin: 10px" disabled>
+				Use Refresh to see messages.
+				</textarea>
+			</div>
+			<div class="col">
+				<form id="refresh" class="form" onsubmit="return false;">
+					<input type="text" class="form-control" name="fromUser" placeholder="From User" style="width: 100%">
+					<input type="submit" class="btn btn-success" value="Refresh" style="width: 100%">
+				</form>
+				<form id="submit-input" class="form" onsubmit="return false;">
+					<input type="text" class="form-control" name="user" placeholder="User to PM" style="width: 100%">
+					<input type="text" class="form-control" name="chat" placeholder="Message" style="width: 100%">
+					<input type="submit" class="btn btn-primary" value="Send" style="width: 100%"></input>
+				</form>
+				<a class="btn btn-primary" href="/index">Go Home</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+			</div>
+			<div class="col">
+				
+			</div>
+		</div>
+	</div>
 </body>
 </html>
